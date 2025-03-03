@@ -16,7 +16,7 @@ export default function Home() {
   const { user } = useUser()
   const email = user?.primaryEmailAddress?.emailAddress as string
   const [name, setName] = useState("")
-  const [descrition, setDescription] = useState("")
+  const [description, setDescription] = useState("")
   const [projects, setProjects] = useState<Project[]>([])
 
   const fetchProjects = async (email: string) => {
@@ -86,7 +86,7 @@ export default function Home() {
               />
               <textarea
                 placeholder="Description"
-                value={descrition}
+                value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 className="mb-2 textarea textarea-bordered border border-base-300 w-full  textarea-md placeholder::text-sm"
                 required
